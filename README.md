@@ -1,0 +1,2 @@
+# RestaurantPage
+Practice using webpack.
