@@ -9,7 +9,8 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].[contenthash].js"
+        filename: "[name].[contenthash].js",
+        clean: true
     },
 
     devServer: {
@@ -27,7 +28,14 @@ module.exports = {
             filename: "index.html",
             template: path.resolve(__dirname,"src/temp.html")
         })
-    ]
+    ],
 
+    //loaders
+    module: {
+        rules: [
+            {test: /\.css$/, use:["style-loader", "css-loader"]},//imported
+            {test:/\.(svg|png)$/, type: "asset/resource"}//built in
+        ]
+    }
 
 }
