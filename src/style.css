@@ -1,7 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
 html {
     background-color: red;
+    height: 100%;
 }
 
-.foodItem {
-    width: 100px;
+body {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(37, 42, 52);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+    width: 70px;
+}
+
+main {
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 20px;
+    width: clamp(400px, 70%, 800px);
+}
+
+footer {
+    background-color: rgb(255, 46, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 70px;
+}
+
+footer img:hover {
+    animation: shake 0.5s;
+}
+    
+    @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
