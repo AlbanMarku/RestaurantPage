@@ -1,4 +1,7 @@
-import testerFunc from "./website.js"
-import style from "./style.css"
+import createHome from "./home"
 
-testerFunc();
+console.log("this is loaded");
+
+//load the main page
+
+createHome();
