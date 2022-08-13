@@ -4,11 +4,11 @@
     padding: 0px;
   }
 
-html {
+html, body {
     height: 100%;
 }
 
-body {
+#content {
     display: grid;
     grid-template-rows: 100px auto 100px;
     height: 100%;
@@ -28,8 +28,6 @@ header img {
     width: 70px;
 }
 
-/* 
-
 main {
     background-color: rgb(234, 234, 234);
     display: flex;
@@ -37,7 +35,13 @@ main {
     align-items: center;
 }
 
-#content {
+main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px 0px;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.24);
     padding: 20px;
     width: clamp(400px, 70%, 800px);
@@ -48,6 +52,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 
+
+
+
+#content {
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 20px;
+    width: clamp(400px, 70%, 800px);
 }
 
 footer img {

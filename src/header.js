@@ -1,7 +1,7 @@
 import logo from "./pics/food.svg"
 import style from "./style.css"
 
-function createHome() {
+function createHeader() {
     const contentArea = document.getElementById("content");
     const headerArea = document.createElement("header");
     const titleText = document.createElement("h1");
@@ -15,4 +15,4 @@ function createHome() {
     headerArea.appendChild(imgElement);
 }
 
-export default createHome
+export default createHeader

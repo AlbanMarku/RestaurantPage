@@ -1,7 +1,11 @@
-import createHome from "./home"
+import createHeader from "./header"
+import createHome from "./homeContent"
+import createFooter from "./footer"
 
 console.log("this is loaded");
 
 //load the main page
 
-createHome();
+createHeader("you are here");
+createHome();//target for changing content
+createFooter();
