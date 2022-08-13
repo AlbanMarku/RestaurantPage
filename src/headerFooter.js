@@ -1,5 +1,15 @@
-import logo from "./pics/food.svg"
 import style from "./style.css"
+import logo from "./pics/food.svg"
+
+function createFooter() {
+    const contentArea = document.getElementById("content");
+    const footerArea = document.createElement("footer");
+    const sampleText = document.createElement("p");
+
+    contentArea.appendChild(footerArea);
+    sampleText.textContent = "footer";
+    footerArea.appendChild(sampleText);
+}
 
 function createHeader() {
     const contentArea = document.getElementById("content");
@@ -14,5 +24,4 @@ function createHeader() {
     imgElement.src = logo;
     headerArea.appendChild(imgElement);
 }
-
-export default createHeader
+export {createFooter, createHeader}
