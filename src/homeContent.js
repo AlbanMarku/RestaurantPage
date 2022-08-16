@@ -5,7 +5,7 @@ function createHome() {
     const mainArea = document.createElement("main");
     const div = document.createElement("div");
     const img = document.createElement("img");
-
+    
     div.classList.add("homeClass");
     mainArea.appendChild(div);
     div.appendChild(paraContent("Serving since 1999"));

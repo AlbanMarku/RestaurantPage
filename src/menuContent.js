@@ -2,23 +2,39 @@ import style from "./style.css"
 
 function createMenu() {
     const mainArea = document.createElement("main");
-    const div = document.createElement("div");
-    const headerText = document.createElement("h2");
+    const gridDiv = document.createElement("div");
 
-    div.classList.add("menuClass");
-    headerText.textContent = "title";
-    mainArea.appendChild(div);
-    div.appendChild(headerText);
-    div.appendChild(paraContent("I am the menu probs changed the ids for styling."));
+    gridDiv.classList.add("menuClass");
+
+    mainArea.appendChild(gridDiv);
+
+    gridDiv.appendChild(createItem("food", "lore"));
+    gridDiv.appendChild(createItem("food", "lore"));
+    gridDiv.appendChild(createItem("food", "lore"));
 
     return mainArea
 }
 
-function paraContent(text) {
-    const para = document.createElement("p");
-    para.textContent = text;
+function createItem(name, description) {
+    const item = document.createElement("div");
+    
+    item.classList.add("menuItem");
 
-    return para
+    const foodName = document.createElement("h2");
+    foodName.textContent = name;
+  
+    const foodDescription = document.createElement("p");
+    foodDescription.textContent = description;
+  
+    const foodImage = document.createElement("img");
+    foodImage.src = "pics/food.svg";
+    foodImage.alt = `${name}`;
+  
+    item.appendChild(foodImage);
+    item.appendChild(foodName);
+    item.appendChild(foodDescription);
+  
+    return item;
 }
 
 export default createMenu

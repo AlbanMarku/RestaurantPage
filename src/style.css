@@ -45,6 +45,10 @@ nav button {
     cursor: pointer;
 }
 
+.active {
+    background-color: blue;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -75,7 +79,26 @@ main {
 }
 
 .menuClass {
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 500px));
+    gap: 20px;
+    padding: 20px;
+}
+
+.menuItem {
+    background-color: rgba(0, 0, 0, 0.377);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+.menuItem img {
+    width: 100px;
 }
 
 .contactClass {

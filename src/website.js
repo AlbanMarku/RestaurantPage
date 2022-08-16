@@ -40,6 +40,7 @@ function createNav() {
 
     homeButton.addEventListener("click",() => {
         loadHome();
+        homeButton.classList.add("active");
     });
 
     contactButton.addEventListener("click",() => {
