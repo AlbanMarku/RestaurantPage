@@ -5,6 +5,7 @@ function createHome() {
     const div = document.createElement("div");
     const headerText = document.createElement("h2");
 
+    div.classList.add("homeClass");
     headerText.textContent = "title";
     mainArea.appendChild(div);
     div.appendChild(headerText);

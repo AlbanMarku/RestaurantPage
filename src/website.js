@@ -2,6 +2,7 @@ import style from "./style.css"
 import logo from "./pics/food.svg"
 import createHome from "./homeContent";
 import createMenu from "./menuContent";
+import createContact from "./contactContent"
 
 function createFooter() {
     const footerArea = document.createElement("footer");
@@ -42,7 +43,7 @@ function createNav() {
     });
 
     contactButton.addEventListener("click",() => {
-        console.log("yeet");
+        loadContact();
     });
 
     menuButton.addEventListener("click",() => {
@@ -74,6 +75,16 @@ function loadHome() {
     content.appendChild(createHeader());
     content.appendChild(createNav());
     content.appendChild(createHome());
+    content.appendChild(createFooter());
+}
+
+function loadContact() {
+    const content = document.getElementById("content");
+
+    content.textContent= "";
+    content.appendChild(createHeader());
+    content.appendChild(createNav());
+    content.appendChild(createContact());
     content.appendChild(createFooter());
 }
 

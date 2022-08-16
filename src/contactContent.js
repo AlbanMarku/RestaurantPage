@@ -1,15 +1,15 @@
 import style from "./style.css"
 
-function createMenu() {
+function createContact() {
     const mainArea = document.createElement("main");
     const div = document.createElement("div");
     const headerText = document.createElement("h2");
 
-    div.classList.add("menuClass");
+    div.classList.add("contactClass");
     headerText.textContent = "title";
     mainArea.appendChild(div);
     div.appendChild(headerText);
-    div.appendChild(paraContent("I am the menu probs changed the ids for styling."));
+    div.appendChild(paraContent("this is the text"));
 
     return mainArea
 }
@@ -21,4 +21,4 @@ function paraContent(text) {
     return para
 }
 
-export default createMenu
+export default createContact
