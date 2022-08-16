@@ -34,7 +34,7 @@ module.exports = {
     module: {
         rules: [
             {test: /\.css$/, use:["style-loader", "css-loader"]},//imported
-            {test:/\.(svg|png)$/, type: "asset/resource"}//built in
+            {test:/\.(svg|png|jpeg|jpg)$/, type: "asset/resource"}//built in
         ]
     }
 

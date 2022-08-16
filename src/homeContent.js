@@ -1,15 +1,18 @@
 import style from "./style.css"
+import homeImage from "./pics/mainPic.jpeg"
 
 function createHome() {
     const mainArea = document.createElement("main");
     const div = document.createElement("div");
-    const headerText = document.createElement("h2");
+    const img = document.createElement("img");
 
     div.classList.add("homeClass");
-    headerText.textContent = "title";
     mainArea.appendChild(div);
-    div.appendChild(headerText);
-    div.appendChild(paraContent("this is the text"));
+    div.appendChild(paraContent("Serving since 1999"));
+    div.appendChild(paraContent("Made with passion"));
+    img.src = homeImage;
+    div.appendChild(img);
+    div.appendChild(paraContent("Order now"));
 
     return mainArea
 }
