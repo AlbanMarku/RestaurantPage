@@ -1,6 +1,6 @@
 import style from "./style.css"
 
-function createHome() {
+function createMenu() {
     const mainArea = document.createElement("main");
     const div = document.createElement("div");
     const headerText = document.createElement("h2");
@@ -8,7 +8,7 @@ function createHome() {
     headerText.textContent = "title";
     mainArea.appendChild(div);
     div.appendChild(headerText);
-    div.appendChild(paraContent("this is the text"));
+    div.appendChild(paraContent("I am the menu probs changed the ids for styling."));
 
     return mainArea
 }
@@ -20,4 +20,4 @@ function paraContent(text) {
     return para
 }
 
-export default createHome
+export default createMenu

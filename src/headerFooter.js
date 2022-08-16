@@ -1,5 +1,7 @@
 import style from "./style.css"
 import logo from "./pics/food.svg"
+import createHome from "./homeContent";
+import createMenu from "./menuContent";
 
 function createFooter() {
     const footerArea = document.createElement("footer");
@@ -31,6 +33,22 @@ function createNav() {
     const contactButton = document.createElement("button");
     const menuButton = document.createElement("button");
 
+    homeButton.textContent = "Home";
+    contactButton.textContent = "Contact";
+    menuButton.textContent = "Menu";
+
+    homeButton.addEventListener("click",() => {
+        loadHome();
+    });
+
+    contactButton.addEventListener("click",() => {
+        console.log("yeet");
+    });
+
+    menuButton.addEventListener("click",() => {
+        loadMenu();
+    });
+
     buttonArea.appendChild(homeButton);
     buttonArea.appendChild(contactButton);
     buttonArea.appendChild(menuButton);
@@ -38,4 +56,25 @@ function createNav() {
     return buttonArea
 
 }
-export {createFooter, createHeader,createNav}
+
+function loadMenu() {
+    const content = document.getElementById("content");
+
+    content.textContent= "";
+    content.appendChild(createHeader());
+    content.appendChild(createNav());
+    content.appendChild(createMenu());
+    content.appendChild(createFooter());
+}
+
+function loadHome() {
+    const content = document.getElementById("content");
+
+    content.textContent= "";
+    content.appendChild(createHeader());
+    content.appendChild(createNav());
+    content.appendChild(createHome());
+    content.appendChild(createFooter());
+}
+
+export {loadHome, loadMenu}

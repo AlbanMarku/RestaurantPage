@@ -10,7 +10,7 @@ html, body {
 
 #content {
     display: grid;
-    grid-template-rows: 100px 50px auto 100px;
+    grid-template-rows: 100px 70px auto 100px;
     height: 100%;
 }
 
@@ -32,6 +32,17 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    background-color: rgb(255, 46, 99);
+}
+
+nav button {
+    border-style: none;
+    padding: 15px;
+    background-color: rgb(37, 42, 52);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 main {
