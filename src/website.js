@@ -1,15 +1,23 @@
 import style from "./style.css"
 import logo from "./pics/food.svg"
-import createHome from "./homeContent";
-import createMenu from "./menuContent";
+import createHome from "./homeContent"
+import createMenu from "./menuContent"
 import createContact from "./contactContent"
+import gitLogo from "../dist/pics/logo.png"
 
 function createFooter() {
     const footerArea = document.createElement("footer");
-    const sampleText = document.createElement("p");
+    const nameText = document.createElement("strong");
+    const linkText = document.createElement("a");
+    const logoImg = document.createElement("img");
 
-    sampleText.textContent = "footer";
-    footerArea.appendChild(sampleText);
+    nameText.textContent = "AlbanMarku";
+    footerArea.appendChild(nameText);
+
+    linkText.href = "https://github.com/AlbanMarku";
+    logoImg.src = gitLogo;
+    linkText.appendChild(logoImg);
+    footerArea.appendChild(linkText);
     
     return footerArea
 }
