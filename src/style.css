@@ -43,11 +43,14 @@ nav button {
     color: white;
     font-weight: bolder;
     cursor: pointer;
+    width: 100px;
 }
 
-.active {
-    background-color: blue;
+nav button.active, nav button:hover {
+    background-color: rgb(0, 0, 0);
 }
+
+
 
 main {
     display: flex;

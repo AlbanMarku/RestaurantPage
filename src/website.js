@@ -28,7 +28,7 @@ function createHeader() {
     return headerArea
 }
 
-function createNav() {
+function createNav(page) {
     const buttonArea = document.createElement("nav");
     const homeButton = document.createElement("button");
     const contactButton = document.createElement("button");
@@ -38,9 +38,16 @@ function createNav() {
     contactButton.textContent = "Contact";
     menuButton.textContent = "Menu";
 
+    if (page === "home") {
+        homeButton.classList.add("active");
+    } else if (page === "menu") {
+        menuButton.classList.add("active");
+    } else if (page === "contact") {
+        contactButton.classList.add("active");
+    }
+
     homeButton.addEventListener("click",() => {
         loadHome();
-        homeButton.classList.add("active");
     });
 
     contactButton.addEventListener("click",() => {
@@ -56,7 +63,6 @@ function createNav() {
     buttonArea.appendChild(menuButton);
 
     return buttonArea
-
 }
 
 function loadMenu() {
@@ -64,7 +70,7 @@ function loadMenu() {
 
     content.textContent= "";
     content.appendChild(createHeader());
-    content.appendChild(createNav());
+    content.appendChild(createNav("menu"));
     content.appendChild(createMenu());
     content.appendChild(createFooter());
 }
@@ -74,7 +80,7 @@ function loadHome() {
 
     content.textContent= "";
     content.appendChild(createHeader());
-    content.appendChild(createNav());
+    content.appendChild(createNav("home"));
     content.appendChild(createHome());
     content.appendChild(createFooter());
 }
