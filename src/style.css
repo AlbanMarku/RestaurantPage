@@ -106,7 +106,13 @@ main {
 }
 
 .contactClass {
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.377);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
 
 }
 

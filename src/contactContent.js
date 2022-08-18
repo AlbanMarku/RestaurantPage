@@ -6,10 +6,10 @@ function createContact() {
     const headerText = document.createElement("h2");
 
     div.classList.add("contactClass");
-    headerText.textContent = "title";
+    headerText.textContent = "Contact us";
     mainArea.appendChild(div);
     div.appendChild(headerText);
-    div.appendChild(paraContent("this is the text"));
+    div.appendChild(paraContent("details"));
 
     return mainArea
 }
